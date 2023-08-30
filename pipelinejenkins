@@ -1,18 +1,19 @@
 pipeline{
-agent any
-stages[
-stage("Build"){
-steps{
-echo 'Bulding the application....'
+    agent any
+    stages{
+        stage('Build'){
+          steps{
+echo 'building the application '
 }
 }
-stage('Test')
-steps{
-echo 'Testing the application..'
+stage('Test'){
+  steps{
+echo 'testing the application..'
 }
-}stage('Deploy'){
-steps{
-echo 'deploying the application...'
+}
+stage('Deploy'){
+  steps{
+echo 'deploying the application..'
 }
 }
 }
